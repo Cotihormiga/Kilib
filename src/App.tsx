@@ -21,12 +21,12 @@ function App() {
     <div className="app">
       {!isWorkoutActive ? (
         <LandingPage onStartWorkout={handleStartWorkout} />
-      ) : (
+      ) : workoutStartTime !== null ? (
         <CurrentWorkout
-          startTime={workoutStartTime!}
+          startTime={workoutStartTime}
           onEndWorkout={handleEndWorkout}
         />
-      )}
+      ) : null}
     </div>
   )
 }
