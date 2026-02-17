@@ -1,11 +1,7 @@
-import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [activeCategory, setActiveCategory] = useState(null)
-
   const handleCategoryClick = (category) => {
-    setActiveCategory(category)
     console.log(`Navigating to ${category}`)
     // Navigation logic will be added later
   }
